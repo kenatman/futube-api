@@ -20,10 +20,19 @@ class App extends Component {
   componentDidMount() {
     this.getVideos();
   }
+
+  handleSearch = async (term) => {
+    const {
+      data: { items },
+    } = await axios.get(
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${term}&key=AIzaSyBDY0VSFooCB3BuL6bFSl78SqZbcdjZoAM`
+    );
+    this.setState({ videos: items });
+  };
   render() {
     return (
       <>
-        <Header />
+        <Header onSearch={this.handleSearch} />
         <Contents contents={this.state.videos} />
       </>
     );

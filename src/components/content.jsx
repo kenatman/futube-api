@@ -11,7 +11,7 @@ class Content extends Component {
         default: { url },
       },
     } = this.props.content.snippet;
-    console.log(url);
+
     return (
       <li>
         <img alt="thumbnail" src={url} />
