@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import "./header.css";
 class Header extends Component {
   inputRef = React.createRef();
 
@@ -10,13 +10,19 @@ class Header extends Component {
   render() {
     return (
       <nav>
-        <form onSubmit={this.handleSubmit}>
+        <form className="search-form" onSubmit={this.handleSubmit}>
+          <a href="/">
+            <i className="fab fa-youtube search-logo"></i>
+          </a>
           <input
+            className="search-input"
             ref={this.inputRef}
             type="text"
             placeholder="Search by keywords..."
           ></input>
-          <button>Search</button>
+          <button className="search-btn">
+            <i className="fas fa-search search-icon"></i>
+          </button>
         </form>
       </nav>
     );

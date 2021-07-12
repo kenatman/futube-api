@@ -1,0 +1,33 @@
+.search-form {
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.search-logo {
+  color: red;
+  font-size: 40px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.search-input {
+  all: unset;
+  padding: 15px 20px;
+  border-radius: 5px;
+  border: 1px solid rgba(70, 29, 29, 0.7);
+  margin-bottom: 5px;
+  margin-right: 20px;
+  font-size: 16px;
+  width: 70%;
+}
+
+.search-btn {
+  all: unset;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  cursor: pointer;
+}
