@@ -17,6 +17,7 @@ class Detail extends Component {
         <div className="detail-container">
           <Iframe
             className="detail-video"
+            //template literals on React components
             url={`http://www.youtube.com/embed/${
               state.id.videoId ? state.id.videoId : state.id
             }`}
